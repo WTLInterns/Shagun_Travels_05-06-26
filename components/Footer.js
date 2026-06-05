@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Facebook, Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Footer() {

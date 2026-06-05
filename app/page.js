@@ -2,6 +2,7 @@ import BookingForm from "../components/BookingForm";
 import HeroBackgroundSlider from "../components/HeroBackgroundSlider";
 import ServiceCard from "../components/ServiceCard";
 import Image from "next/image";
+import { Suspense } from "react";
 import {
   Building2,
   MapPinned,
@@ -76,7 +77,9 @@ export default function Home() {
         </div>
 
         <div className="lg:pl-6 relative z-10">
-          <BookingForm />
+          <Suspense fallback={<div className="h-96 w-full animate-pulse rounded-2xl bg-slate-100" />}>
+            <BookingForm />
+          </Suspense>
         </div>
       </section>
 
