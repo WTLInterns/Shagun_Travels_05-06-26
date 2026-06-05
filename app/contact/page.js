@@ -79,20 +79,20 @@ export default function ContactPage() {
             <ContactCard
               icon={Phone}
               title="Call Us"
-              lines={["+91 99999 99999", "+91 88888 88888"]}
-              action={{ href: "tel:+919999999999", label: "Call Now" }}
+              lines={[<a key="1" href="tel:+919869808318" className="hover:text-red-600 hover:underline">+91 9869808318</a>, <a key="2" href="tel:+919004561775" className="hover:text-red-600 hover:underline">+91 9004561775</a>]}
+              action={{ href: "tel:+919869808318", label: "Call Now" }}
             />
             <ContactCard
               icon={MessageCircle}
               title="WhatsApp"
-              lines={["+91 99999 99999", "Quick Response"]}
-              action={{ href: "https://wa.me/919999999999", label: "Chat Now" }}
+              lines={[<a key="1" href="https://wa.me/919869808318" className="hover:text-red-600 hover:underline">+91 9869808318</a>, "Quick Response"]}
+              action={{ href: "https://wa.me/919869808318", label: "Chat Now" }}
             />
             <ContactCard
               icon={Mail}
               title="Email Us"
-              lines={["marmikca@gmail.com", "24hr Response Time"]}
-              action={{ href: "mailto:marmikca@gmail.com", label: "Send Email" }}
+              lines={[<a key="1" href="mailto:shaguntravels1@gmail.com" className="hover:text-red-600 hover:underline">shaguntravels1@gmail.com</a>, "24hr Response Time"]}
+              action={{ href: "mailto:shaguntravels1@gmail.com", label: "Send Email" }}
             />
             <ContactCard
               icon={MapPin}
@@ -243,7 +243,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">Office Address</h3>
-                    <p className="text-slate-300">Nanded City, Pune - 411024</p>
+                    <p className="text-slate-300">Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</p>
                     <p className="text-slate-400 text-sm">Maharashtra, India</p>
                   </div>
                 </div>
@@ -263,8 +263,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">Contact Numbers</h3>
-                    <p className="text-slate-300">+91 99999 99999</p>
-                    <p className="text-slate-300">+91 88888 88888</p>
+                    <p className="text-slate-300"><a href="tel:+919869808318" className="hover:text-white hover:underline">+91 9869808318</a></p>
+                    <p className="text-slate-300"><a href="tel:+919004561775" className="hover:text-white hover:underline">+91 9004561775</a></p>
                   </div>
                 </div>
               </div>
@@ -315,7 +315,7 @@ export default function ContactPage() {
               <Instagram className="h-7 w-7" />
             </a>
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919869808318"
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500 text-white shadow-lg transition-all hover:bg-emerald-600 hover:scale-110"
@@ -340,14 +340,14 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:+919999999999" 
+              href="tel:+919869808318" 
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-bold text-red-600 shadow-lg transition-all hover:bg-slate-100 hover:shadow-xl"
             >
               <Phone className="h-5 w-5" />
               Call Now
             </a>
             <a 
-              href="https://wa.me/919999999999" 
+              href="https://wa.me/919869808318" 
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white bg-transparent px-8 py-4 text-base font-bold text-white transition-all hover:bg-white hover:text-red-600"

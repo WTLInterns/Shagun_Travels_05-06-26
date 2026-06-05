@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
-const tripTypes = ["One Way", "Round Trip", "Rental Trip"];
+const tripTypes = ["One Way", "Round Trip", "Rental Trip", "Navi Mumbai Airport"];
 const carCategories = ["Hatchback", "Sedan", "Sedan Premium", "SUV", "MUV"];
 
 const initialForm = {
@@ -18,8 +19,17 @@ const initialForm = {
 };
 
 export default function BookingForm() {
+  const searchParams = useSearchParams();
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState({ state: "idle", message: "" });
+
+  // Pre-fill pickup location from URL parameter
+  useEffect(() => {
+    const pickupParam = searchParams.get("pickup");
+    if (pickupParam) {
+      setForm(prev => ({ ...prev, pickupLocation: decodeURIComponent(pickupParam) }));
+    }
+  }, [searchParams]);
 
   const setField = (key) => (e) =>
     setForm((prev) => ({ ...prev, [key]: e.target.value }));
@@ -35,25 +45,25 @@ export default function BookingForm() {
         body: JSON.stringify({ type: "booking", ...form }),
       });
 
-      const data = await res.json().catch(() => ({}));
+      const data = await res.json().catch(() => ({}));    
       if (!res.ok) {
         throw new Error(data?.error || "Failed to send booking request");
       }
 
       setStatus({ state: "success", message: "Booking request sent." });
-      setForm(initialForm);
+      setForm(initialForm);   
     } catch (err) {
       setStatus({ state: "error", message: err.message || "Something went wrong" });
     }
   };
 
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-xl ring-1 ring-slate-200">
+    <div className="mx-auto w-full max-w-lg rounded-2xl bg-white p-5 md:p-6 shadow-xl ring-1 ring-slate-200">
       <div className="text-xs font-semibold tracking-wider text-red-600">
         BOOK A CAB NOW
       </div>
 
-      <form onSubmit={onSubmit} className="mt-5 space-y-4">
+      <form onSubmit={onSubmit} className="mt-4 space-y-3 md:space-y-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
             <label className="text-xs font-semibold text-slate-700">
@@ -62,7 +72,7 @@ export default function BookingForm() {
             <select
               value={form.tripType}
               onChange={setField("tripType")}
-              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
             >
               {tripTypes.map((t) => (
                 <option key={t} value={t}>
@@ -79,7 +89,7 @@ export default function BookingForm() {
             <select
               value={form.carCategory}
               onChange={setField("carCategory")}
-              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
             >
               {carCategories.map((c) => (
                 <option key={c} value={c}>
@@ -97,7 +107,7 @@ export default function BookingForm() {
           <input
             value={form.pickupLocation}
             onChange={setField("pickupLocation")}
-            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
             placeholder="Enter pickup location"
             required
           />
@@ -110,7 +120,7 @@ export default function BookingForm() {
           <input
             value={form.dropLocation}
             onChange={setField("dropLocation")}
-            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
             placeholder="Enter drop location"
             required
           />
@@ -123,7 +133,7 @@ export default function BookingForm() {
               type="date"
               value={form.date}
               onChange={setField("date")}
-              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
               required
             />
           </div>
@@ -133,7 +143,7 @@ export default function BookingForm() {
               type="time"
               value={form.time}
               onChange={setField("time")}
-              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
               required
             />
           </div>
@@ -145,7 +155,7 @@ export default function BookingForm() {
             <input
               value={form.name}
               onChange={setField("name")}
-              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
               placeholder="Your name"
               required
             />
@@ -157,7 +167,7 @@ export default function BookingForm() {
             <input
               value={form.phone}
               onChange={setField("phone")}
-              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
               placeholder="Your phone"
               required
             />
@@ -170,7 +180,7 @@ export default function BookingForm() {
             type="email"
             value={form.email}
             onChange={setField("email")}
-            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-red-500"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-red-500"
             placeholder="you@example.com"
             required
           />

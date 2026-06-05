@@ -43,7 +43,7 @@ export default function Home() {
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919869808318"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-emerald-600"
@@ -194,11 +194,12 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-slate-900">Our Fleet</h2>
             <p className="mt-3 text-slate-600">Choose from our wide range of well-maintained vehicles</p>
-          </div>
+          </div>       
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-200">
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
-                <Image src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Hatchback" fill className="object-cover" />
+                {/* <Image src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Hatchback" fill className="object-cover" /> */}
+                <Image src="/cab/wagonr.jpg" alt="Hatchback" fill className="object-contain" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Hatchback</h3>
               <p className="text-sm text-slate-600">Swift, i10, WagonR - 4 Seater</p>
@@ -209,7 +210,9 @@ export default function Home() {
             </div>
             <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-200">
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
-                <Image src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=600&q=80" alt="Sedan" fill className="object-cover" />
+                {/* <Image src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=600&q=80" alt="Sedan" fill className="object-cover" /> */}
+                <Image src="/cab/sedan-car.jpg" alt="Sedan" fill className="object-contain" />
+
               </div>
               <h3 className="text-lg font-bold text-slate-900">Sedan</h3>
               <p className="text-sm text-slate-600">Dzire, Etios, Xcent - 4 Seater</p>
@@ -220,7 +223,9 @@ export default function Home() {
             </div>
             <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-200">
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
-                <Image src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=600&q=80" alt="SUV" fill className="object-cover" />
+                {/* <Image src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=600&q=80" alt="SUV" fill className="object-cover" /> */}
+                <Image src="/cab/Innova.png" alt="SUV" fill className="object-contain" />
+
               </div>
               <h3 className="text-lg font-bold text-slate-900">SUV</h3>
               <p className="text-sm text-slate-600">Innova, Ertiga, Xylo - 6/7 Seater</p>
@@ -231,7 +236,9 @@ export default function Home() {
             </div>
             <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-200">
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
-                <Image src="https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?auto=format&fit=crop&w=600&q=80" alt="Tempo Traveller" fill className="object-cover" />
+                {/* <Image src="https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?auto=format&fit=crop&w=600&q=80" alt="Tempo Traveller" fill className="object-cover" /> */}
+                <Image src="/cab/Tempo_travelers.jpg" alt="Tempo Traveller" fill className="object-contain" />
+
               </div>
               <h3 className="text-lg font-bold text-slate-900">Tempo Traveller</h3>
               <p className="text-sm text-slate-600">Force Traveller - 12/14/17 Seater</p>
@@ -360,13 +367,13 @@ export default function Home() {
       <section className="bg-red-600">
         <div className="w-full px-6 py-16 md:px-12 lg:px-20 xl:px-32 text-center">
           <h2 className="text-3xl font-extrabold text-white">Ready to Book Your Ride?</h2>
-          <p className="mt-3 text-red-100 max-w-2xl mx-auto">Experience hassle-free cab booking with Marmikca Cab Services. Available 24x7 for local and outstation travel across India.</p>
+          <p className="mt-3 text-red-100 max-w-2xl mx-auto">Experience hassle-free cab booking with Shagun Travels. Available 24x7 for local and outstation travel across India.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-bold text-red-600 shadow-sm transition-colors hover:bg-slate-100">
+            <a href="https://wa.me/919869808318" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-bold text-red-600 shadow-sm transition-colors hover:bg-slate-100">
               <MessageCircle className="h-5 w-5" />
               WhatsApp Booking
             </a>
-            <a href="tel:+919999999999" className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white bg-transparent px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/10">
+            <a href="tel:+919869808318" className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white bg-transparent px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/10">
               <Phone className="h-5 w-5" />
               Call Now
             </a>

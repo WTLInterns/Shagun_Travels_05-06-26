@@ -61,7 +61,7 @@ export default function AboutPage() {
             Your Trusted Travel Partner Across India
           </h1>
           <p className="mt-6 text-lg md:text-xl text-slate-200 max-w-2xl mx-auto">
-            Marmikca Cab Services provides reliable, safe, and comfortable cab services 
+            Shagun Travels provides reliable, safe, and comfortable cab services 
             with a commitment to excellence and customer satisfaction.
           </p>
         </div>
@@ -104,10 +104,10 @@ export default function AboutPage() {
                 WHO WE ARE
               </div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
-                Leading Cab Service Provider in Pune
+                Leading Cab Service Provider in Mumbai
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Founded in 2016, Marmikca Cab Services has grown from a small fleet of 5 cars 
+                Founded in 2018, Shagun Travels has grown from a small fleet of 5 cars 
                 to a trusted transportation partner serving thousands of customers across 
                 Maharashtra and beyond. We understand that every journey matters.
               </p>
@@ -240,14 +240,14 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { name: "Hatchback", model: "Swift, i10, WagonR", seats: "4 Passengers", price: "Rs.12/km", image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=80" },
-              { name: "Sedan", model: "Dzire, Etios, Xcent", seats: "4 Passengers", price: "Rs.14/km", image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=400&q=80" },
-              { name: "SUV", model: "Innova, Ertiga, Xylo", seats: "6-7 Passengers", price: "Rs.18/km", image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=400&q=80" },
-              { name: "Tempo Traveller", model: "Force Traveller", seats: "12-17 Passengers", price: "Rs.25/km", image: "https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?auto=format&fit=crop&w=400&q=80" },
+              { name: "Hatchback", model: "Swift, i10, WagonR", seats: "4 Passengers", image: "/cab/wagonr.jpg" },
+              { name: "Sedan", model: "Dzire, Etios, Xcent", seats: "4 Passengers", image: "/cab/sedan-car.jpg" },
+              { name: "SUV", model: "Innova, Ertiga, Xylo", seats: "6-7 Passengers", image: "/cab/Innova.png" },
+              { name: "Tempo Traveller", model: "Force Traveller", seats: "12-17 Passengers", image: "/cab/Tempo_travelers.jpg" },
             ].map((car) => (
               <div key={car.name} className="group rounded-3xl bg-white p-4 shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <div className="relative h-48 w-full rounded-2xl overflow-hidden mb-4">
-                  <Image src={car.image} alt={car.name} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <Image src={car.image} alt={car.name} fill className="object-contain transition-transform duration-500 group-hover:scale-110" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">{car.name}</h3>
                 <p className="text-sm text-slate-500">{car.model}</p>
@@ -353,7 +353,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+919999999999" 
+                href="tel:+919869808318" 
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-red-700 hover:shadow-xl"
               >
                 <Phone className="h-5 w-5" />
@@ -390,7 +390,7 @@ export default function AboutPage() {
                 <MapPin className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Office Address</h3>
-              <p className="text-slate-600">Nanded City, Pune - 411024</p>
+              <p className="text-slate-600">Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</p>
               <p className="text-slate-500 text-sm">Maharashtra, India</p>
             </div>
             <div className="rounded-3xl bg-slate-50 p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -398,15 +398,15 @@ export default function AboutPage() {
                 <Phone className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Phone Numbers</h3>
-              <p className="text-slate-600">+91 99999 99999</p>
-              <p className="text-slate-600">+91 88888 88888</p>
+              <p className="text-slate-600"><a href="tel:+919869808318" className="hover:text-red-600 hover:underline">+91 9869808318</a></p>
+              <p className="text-slate-600"><a href="tel:+919004561775" className="hover:text-red-600 hover:underline">+91 9004561775</a></p>
             </div>
             <div className="rounded-3xl bg-slate-50 p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-red-100">
                 <Mail className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Email Us</h3>
-              <p className="text-slate-600">marmikca@gmail.com</p>
+              <p className="text-slate-600"><a href="mailto:shaguntravels1@gmail.com" className="hover:text-red-600 hover:underline">shaguntravels1@gmail.com</a></p>
               <p className="text-slate-500 text-sm">24/7 Support Available</p>
             </div>
           </div>

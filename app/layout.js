@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "MarmikcaCabServices",
+  title: "SHAGUN TRAVELS",
   description: "Premium cab booking services across major cities in India.",
 };
 

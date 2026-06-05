@@ -59,7 +59,7 @@ function FleetCard({ image, name, model, seats, price }) {
   return (
     <div className="group rounded-3xl bg-white p-4 shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
       <div className="relative h-48 w-full rounded-2xl overflow-hidden mb-4">
-        <Image src={image} alt={name} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+        <Image src={image} alt={name} fill className="object-contain transition-transform duration-500 group-hover:scale-110" />
       </div>
       <h3 className="text-lg font-bold text-slate-900">{name}</h3>
       <p className="text-sm text-slate-500">{model}</p>
@@ -67,7 +67,7 @@ function FleetCard({ image, name, model, seats, price }) {
         <span className="text-xs text-slate-600 flex items-center gap-1">
           <Users className="h-3 w-3" /> {seats}
         </span>
-        <span className="text-sm font-bold text-red-600">{price}</span>
+        {price && <span className="text-sm font-bold text-red-600">{price}</span>}
       </div>
     </div>
   );
@@ -141,7 +141,7 @@ export default function ServicesPage() {
               icon={MapPinned}
               title="Outstation Travel"
               description="Weekend getaways, pilgrimages, and business trips to Mumbai, Shirdi, Nashik, Goa, and more destinations across India."
-              price="Starting from Rs.10/km"
+              price="Starting from Rs.22/km"
               features={["One-way & round trip", "Multiple stops", "Experienced drivers", "All routes covered"]}
             />
           </div>
@@ -225,32 +225,32 @@ export default function ServicesPage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <FleetCard
-              image="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=80"
+              image="/cab/wagonr.jpg"
               name="Hatchback"
               model="Swift, i10, WagonR"
               seats="4 Passengers"
-              price="Rs.12/km"
+              // price="Rs.12/km"
             />
             <FleetCard
-              image="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=400&q=80"
+              image="/cab/sedan-car.jpg"
               name="Sedan"
               model="Dzire, Etios, Xcent"
               seats="4 Passengers"
-              price="Rs.14/km"
+              // price="Rs.14/km"
             />
             <FleetCard
-              image="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=400&q=80"
+              image="/cab/Innova.png"
               name="SUV"
               model="Innova, Ertiga, Xylo"
               seats="6-7 Passengers"
-              price="Rs.18/km"
+              // price="Rs.18/km"
             />
             <FleetCard
-              image="https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?auto=format&fit=crop&w=400&q=80"
+              image="/cab/Tempo_travelers.jpg"
               name="Tempo Traveller"
               model="Force Traveller"
               seats="12-17 Passengers"
-              price="Rs.25/km"
+              // price="Rs.25/km"
             />
           </div>
         </div>
@@ -278,12 +278,12 @@ export default function ServicesPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { from: "Pune", to: "Mumbai", distance: "150 km", time: "3 hrs", sedan: "Rs.1800", suv: "Rs.2500" },
-              { from: "Pune", to: "Shirdi", distance: "200 km", time: "4 hrs", sedan: "Rs.2200", suv: "Rs.3000" },
-              { from: "Pune", to: "Nashik", distance: "210 km", time: "4.5 hrs", sedan: "Rs.2300", suv: "Rs.3200" },
-              { from: "Pune", to: "Goa", distance: "350 km", time: "6 hrs", sedan: "Rs.3500", suv: "Rs.5000" },
-              { from: "Pune", to: "Kolhapur", distance: "240 km", time: "5 hrs", sedan: "Rs.2600", suv: "Rs.3600" },
-              { from: "Pune", to: "Hyderabad", distance: "560 km", time: "10 hrs", sedan: "Rs.5500", suv: "Rs.7500" },
+              { from: "Pune", to: "Mumbai", distance: "150 km", time: "3 hrs"},
+              { from: "Pune", to: "Shirdi", distance: "200 km", time: "4 hrs" },
+              { from: "Pune", to: "Nashik", distance: "210 km", time: "4.5 hrs" },
+              { from: "Pune", to: "Goa", distance: "350 km", time: "6 hrs" },
+              { from: "Pune", to: "Kolhapur", distance: "240 km", time: "5 hrs" },
+              { from: "Pune", to: "Hyderabad", distance: "560 km", time: "10 hrs" },
             ].map((route, idx) => (
               <div key={idx} className="rounded-2xl bg-white/10 backdrop-blur-sm p-6 border border-white/10 transition-all duration-300 hover:bg-white/20">
                 <div className="flex items-center justify-between mb-3">
@@ -291,10 +291,10 @@ export default function ServicesPage() {
                   <Car className="h-5 w-5 text-red-400" />
                 </div>
                 <div className="text-sm text-slate-300 mb-3">{route.distance} • {route.time}</div>
-                <div className="flex items-center justify-between text-sm">
+                {/* <div className="flex items-center justify-between text-sm">
                   <span className="text-slate-300">Sedan: <span className="text-white font-semibold">{route.sedan}</span></span>
                   <span className="text-slate-300">SUV: <span className="text-white font-semibold">{route.suv}</span></span>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
@@ -345,7 +345,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:+919999999999" 
+              href="tel:+919869808318" 
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-bold text-red-600 shadow-lg transition-all hover:bg-slate-100 hover:shadow-xl"
             >
               <Phone className="h-5 w-5" />

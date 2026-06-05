@@ -61,7 +61,7 @@ export default function Navbar() {
   const socialLinks = useMemo(
     () => [
       {
-        href: "https://wa.me/919999999999",
+        href: "https://wa.me/919869808318",
         label: "WhatsApp",
         Icon: MessageCircle,
       },
@@ -86,7 +86,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6 text-xs">
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-red-400" />
-              <span>Nanded City, Pune - 411024</span>
+              <span>Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock3 className="h-4 w-4 text-red-400" />
@@ -94,9 +94,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-red-400" />
-              <span>+91 99999 99999</span>
-              <span className="text-slate-400">|</span>
-              <span>+91 88888 88888</span>
+              <a href="tel:+919869808318" className="hover:text-white hover:underline">+91 9869808318</a>
             </div>
           </div>
 
@@ -122,13 +120,13 @@ export default function Navbar() {
           <Link
             href="/"
             className="flex items-center gap-3 text-slate-900"
-            aria-label="MarmikcaCabServices Home"
+            aria-label="SHAGUN TRAVELS Home"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-600 text-white shadow-sm">
-              <span className="text-sm font-bold">MC</span>
+            <span className="flex h-10 w-12 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-600 text-white shadow-sm">
+              <span className="text-sm font-bold">ST</span>
             </span>
             <span className="text-base font-extrabold tracking-tight sm:text-lg">
-              MarmikcaCabServices
+              SHAGUN TRAVELS
             </span>
           </Link>
 
@@ -137,7 +135,7 @@ export default function Navbar() {
               <NavLink key={l.href} href={l.href} label={l.label} Icon={l.Icon} />
             ))}
             <a
-              href="#"
+              href="/contact"
               className="rounded-lg bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-600"
             >
               Join Us
@@ -166,7 +164,7 @@ export default function Navbar() {
           <div className="absolute right-0 top-0 h-full w-[82%] bg-white shadow-xl">
             <div className="flex items-center justify-between border-b border-slate-200 p-4">
               <span className="text-sm font-bold text-slate-900">
-                MarmikcaCabServices
+                SHAGUN TRAVELS
               </span>
               <button
                 type="button"
@@ -190,7 +188,7 @@ export default function Navbar() {
               ))}
 
               <a
-                href="#"
+                href="/contact"
                 className="mt-2 inline-flex items-center justify-center rounded-lg bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-600"
               >
                 Join Us
@@ -199,11 +197,11 @@ export default function Navbar() {
               <div className="mt-4 rounded-xl bg-slate-50 p-4">
                 <div className="flex items-center gap-2 text-xs text-slate-700">
                   <MapPin className="h-4 w-4 text-red-500" />
-                  <span>Nanded City, Pune - 411024</span>
+                  <span>Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</span>
                 </div>
                 <div className="mt-2 flex items-center gap-2 text-xs text-slate-700">
                   <Phone className="h-4 w-4 text-red-500" />
-                  <span>+91 99999 99999</span>
+                  <a href="tel:+919869808318" className="hover:text-red-500 hover:underline">+91 9869808318</a>
                 </div>
                 <div className="mt-2 flex items-center gap-2 text-xs text-slate-700">
                   <Clock3 className="h-4 w-4 text-red-500" />
