@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Facebook, Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 import { useEffect } from "react";
 
+import Image from "next/image";
+
 export default function Footer() {
   const states = ["Maharashtra", "Goa", "Karnataka", "Telangana", "Gujarat", "MP"];
   const cities = ["Pune", "Mumbai", "Nashik", "Shirdi", "Kolhapur", "Hyderabad", "Indore", "Bhopal", "Surat", "Bangalore"];
@@ -17,13 +19,20 @@ export default function Footer() {
       <div className="w-full px-6 py-14 md:px-12 lg:px-20 xl:px-32">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <h3 className="text-lg font-extrabold tracking-tight text-white">
-              SHAGUN TRAVELS
-            </h3>
+            <div className="mb-6">
+              <div className="relative h-16 w-48 overflow-hidden">
+                <Image 
+                  src="/cab/logo.jpeg" 
+                  alt="SHAGUN TRAVELS Logo" 
+                  fill 
+                  className="object-contain object-left" 
+                />
+              </div>
+            </div>
             <div className="mt-5 space-y-3 text-sm text-slate-300">
               <div className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 text-red-400" />
-                <span>Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</span>
+                <span>new Kalina market Rani Lakshmibai madai shop no 39 1st floor near geeta Vihar hotel kalina santacruz east Mumbai 400029</span>
               </div>
               <div className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 text-red-400" />
@@ -33,7 +42,11 @@ export default function Footer() {
                 </div>
               </div>
               <div>
-                <span className="text-slate-400">Email:</span> <a href="mailto:shaguntravels1@gmail.com" className="hover:text-white hover:underline">shaguntravels1@gmail.com</a>
+                <span className="text-slate-400">Email:</span>
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:info@shaguntravels.co.in" className="hover:text-white hover:underline">info@shaguntravels.co.in</a>
+                  <a href="mailto:shaguntravels1@gmail.com" className="hover:text-white hover:underline">shaguntravels1@gmail.com</a>
+                </div>
               </div>
             </div>
 

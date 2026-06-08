@@ -91,8 +91,12 @@ export default function ContactPage() {
             <ContactCard
               icon={Mail}
               title="Email Us"
-              lines={[<a key="1" href="mailto:shaguntravels1@gmail.com" className="hover:text-red-600 hover:underline">shaguntravels1@gmail.com</a>, "24hr Response Time"]}
-              action={{ href: "mailto:shaguntravels1@gmail.com", label: "Send Email" }}
+              lines={[
+                <a key="1" href="mailto:info@shaguntravels.co.in" className="hover:text-red-600 hover:underline">info@shaguntravels.co.in</a>,
+                <a key="2" href="mailto:shaguntravels1@gmail.com" className="hover:text-red-600 hover:underline">shaguntravels1@gmail.com</a>,
+                "24hr Response Time"
+              ]}
+              action={{ href: "mailto:info@shaguntravels.co.in", label: "Send Email" }}
             />
             <ContactCard
               icon={MapPin}
@@ -243,7 +247,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">Office Address</h3>
-                    <p className="text-slate-300">Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</p>
+                    <p className="text-slate-300">new Kalina market Rani Lakshmibai madai shop no 39 1st floor near geeta Vihar hotel kalina santacruz east Mumbai 400029</p>
                     <p className="text-slate-400 text-sm">Maharashtra, India</p>
                   </div>
                 </div>

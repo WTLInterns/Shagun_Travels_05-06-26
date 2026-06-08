@@ -198,7 +198,7 @@ export default function Home() {
             <h2 className="text-3xl font-extrabold text-slate-900">Our Fleet</h2>
             <p className="mt-3 text-slate-600">Choose from our wide range of well-maintained vehicles</p>
           </div>       
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-200">
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
                 {/* <Image src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Hatchback" fill className="object-cover" /> */}
@@ -213,9 +213,18 @@ export default function Home() {
             </div>
             <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-200">
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
-                {/* <Image src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=600&q=80" alt="Sedan" fill className="object-cover" /> */}
+                <Image src="/cab/sedan-car.jpg" alt="Swift Desire" fill className="object-contain" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">Swift Desire</h3>
+              <p className="text-sm text-slate-600">Premium Sedan - 4 Seater</p>
+              <div className="mt-3 flex items-center gap-2 text-sm text-slate-700">
+                <Users className="h-4 w-4" />
+                <span>4 Passengers</span>
+              </div>
+            </div>
+            <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-200">
+              <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
                 <Image src="/cab/sedan-car.jpg" alt="Sedan" fill className="object-contain" />
-
               </div>
               <h3 className="text-lg font-bold text-slate-900">Sedan</h3>
               <p className="text-sm text-slate-600">Dzire, Etios, Xcent - 4 Seater</p>
@@ -303,21 +312,24 @@ export default function Home() {
         <div className="w-full px-6 py-16 md:px-12 lg:px-20 xl:px-32">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-slate-900">Popular Routes</h2>
-            <p className="mt-3 text-slate-600">Most booked cab routes from Pune</p>
+            <p className="mt-3 text-slate-600">Most booked cab routes from Mumbai and Pune</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              {from: "Pune", to: "Mumbai", km: "150", time: "3 hrs"},
-              {from: "Pune", to: "Shirdi", km: "200", time: "4 hrs"},
-              {from: "Pune", to: "Nashik", km: "210", time: "4.5 hrs"},
-              {from: "Pune", to: "Kolhapur", km: "240", time: "5 hrs"},
-              {from: "Pune", to: "Goa", km: "350", time: "6 hrs"},
-              {from: "Pune", to: "Hyderabad", km: "560", time: "10 hrs"},
+              { from: "Mumbai", to: "Pune", distance: "150 km",},
+              { from: "Pune", to: "Mumbai", distance: "150 km",},
+              { from: "Mumbai", to: "Nashik", distance: "217 km", },
+              { from: "Nashik", to: "Mumbai", distance: "217 km", },
+              { from: "Mumbai", to: "Alibag ", distance: "99 km", },
+              { from: "Mumbai", to: "Goa", distance: "350 km", },
+              { from: "Mumbai", to: "Kolhapur", distance: "240 km", },
+              { from: "Kolhapur", to: "Mumbai", distance: "240 km", },
+              { from: "Mumbai", to: "Hyderabad", distance: "560 km", },
             ].map((route) => (
               <div key={route.to} className="flex items-center justify-between rounded-xl bg-white p-4 shadow-sm border border-slate-200">
                 <div>
                   <div className="font-bold text-slate-900">{route.from} to {route.to}</div>
-                  <div className="text-sm text-slate-600">{route.km} km • {route.time}</div>
+                  <div className="text-sm text-slate-600">{route.distance}</div>
                 </div>
                 <Car className="h-6 w-6 text-red-600" />
               </div>

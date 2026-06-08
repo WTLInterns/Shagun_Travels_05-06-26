@@ -18,6 +18,8 @@ import {
   MessageCircle,
 } from "lucide-react";
 
+import Image from "next/image";
+
 const navLinks = [
   { href: "/", label: "Home", Icon: House },
   { href: "/about", label: "About", Icon: Info },
@@ -82,16 +84,16 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full">
       <div className="hidden w-full border-b border-slate-200 bg-slate-900 text-slate-100 md:block">
-        <div className="flex w-full items-center justify-between gap-6 px-6 py-2 md:px-12 lg:px-20 xl:px-32">
+        <div className="flex w-full items-center justify-between gap-6 px-6 py-1.5 md:px-12 lg:px-20 xl:px-32">
           <div className="flex items-center gap-6 text-xs">
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-red-400" />
-              <span>Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</span>
+              <span>new Kalina market Rani Lakshmibai madai shop no 39 1st floor near geeta Vihar hotel kalina santacruz east Mumbai 400029</span>
             </div>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <Clock3 className="h-4 w-4 text-red-400" />
               <span>24x7</span>
-            </div>
+            </div> */}
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-red-400" />
               <a href="tel:+919869808318" className="hover:text-white hover:underline">+91 9869808318</a>
@@ -116,18 +118,21 @@ export default function Navbar() {
       </div>
 
       <div className="w-full border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="flex w-full items-center justify-between px-6 py-3 md:px-12 lg:px-20 xl:px-32">
+        <div className="flex w-full items-center justify-between px-6 py-1.5 md:px-12 lg:px-20 xl:px-32">
           <Link
             href="/"
-            className="flex items-center gap-3 text-slate-900"
+            className="flex items-center text-slate-900"
             aria-label="SHAGUN TRAVELS Home"
           >
-            <span className="flex h-10 w-12 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-600 text-white shadow-sm">
-              <span className="text-sm font-bold">ST</span>
-            </span>
-            <span className="text-base font-extrabold tracking-tight sm:text-lg">
-              SHAGUN TRAVELS
-            </span>
+            <div className="relative h-16 w-50 overflow-hidden sm:h-16 sm:w-52">
+              <Image 
+                src="/cab/logo.jpeg" 
+                alt="SHAGUN TRAVELS Logo" 
+                fill 
+                priority
+                className="object-contain object-left" 
+              />
+            </div>
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex">
@@ -136,7 +141,7 @@ export default function Navbar() {
             ))}
             <a
               href="/contact"
-              className="rounded-lg bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-600"
+              className="rounded-lg bg-red-500 px-3.5 py-1.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-600"
             >
               Join Us
             </a>
@@ -163,9 +168,14 @@ export default function Navbar() {
           />
           <div className="absolute right-0 top-0 h-full w-[82%] bg-white shadow-xl">
             <div className="flex items-center justify-between border-b border-slate-200 p-4">
-              <span className="text-sm font-bold text-slate-900">
-                SHAGUN TRAVELS
-              </span>
+              <div className="relative h-12 w-36 overflow-hidden">
+                <Image 
+                  src="/cab/logo.jpeg" 
+                  alt="Logo" 
+                  fill 
+                  className="object-contain object-left" 
+                />
+              </div>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -197,7 +207,7 @@ export default function Navbar() {
               <div className="mt-4 rounded-xl bg-slate-50 p-4">
                 <div className="flex items-center gap-2 text-xs text-slate-700">
                   <MapPin className="h-4 w-4 text-red-500" />
-                  <span>Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</span>
+                  <span>new Kalina market Rani Lakshmibai madai shop no 39 1st floor near geeta Vihar hotel kalina santacruz east Mumbai 400029</span>
                 </div>
                 <div className="mt-2 flex items-center gap-2 text-xs text-slate-700">
                   <Phone className="h-4 w-4 text-red-500" />

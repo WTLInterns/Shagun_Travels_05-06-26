@@ -74,7 +74,7 @@ export default function AboutPage() {
             <StatCard number="5000+" label="Happy Customers" icon={Users} />
             <StatCard number="100+" label="Professional Drivers" icon={Car} />
             <StatCard number="50+" label="Cities Covered" icon={MapPin} />
-            <StatCard number="8+" label="Years Experience" icon={Award} />
+            <StatCard number="13+" label="Years Experience" icon={Award} />
           </div>
         </div>
       </section>
@@ -105,31 +105,32 @@ export default function AboutPage() {
               </div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
                 Leading Cab Service Provider in Mumbai
-              </h2>
+              </h2> 
+              <br />
+              <h3 className="text-2xl font-bold text-slate-900">
+                About <b>Shagun Travels</b> Mumbai
+              </h3>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Founded in 2018, Shagun Travels has grown from a small fleet of 5 cars 
-                to a trusted transportation partner serving thousands of customers across 
-                Maharashtra and beyond. We understand that every journey matters.
+                Shagun Travels Mumbai is a trusted car rental and transportation company serving businesses and individuals since 2013. We provide corporate transportation, chauffeur-driven car services, airport transfers, employee transportation, and fleet management solutions with a strong focus on safety, reliability, and punctuality.
               </p>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Whether it is an early morning airport transfer, a family vacation to Goa, 
-                or daily corporate commutes, we ensure every ride is comfortable, safe, 
-                and punctual. Our drivers are not just professionals—they are travel 
-                companions who prioritize your safety and comfort.
+                We are proud to serve leading organizations such as Sherwin-Williams, Asian PPG, Chaudhary International, Rudra Aluminium Formwork, Muthoot Housing Finance, Muthoot MICROFIN , Forward Engineering Industries, Raj Darbar Group, Mangalam Enterprises, Plus Advance Technologies, and Agility Logistics Private Limited.
               </p>
+              <br />
+              <p>With a professional team and well-maintained fleet, Shagun Travels Mumbai is committed to delivering comfortable, dependable, and hassle-free travel experiences for every client.</p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200">
                   <ShieldCheck className="h-5 w-5 text-red-600" />
-                  <span className="text-sm font-medium text-slate-700">Safety First</span>
+                  <span className="text-sm font-medium text-slate-700">Trusted Since 2013</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200">
                   <Clock className="h-5 w-5 text-red-600" />
-                  <span className="text-sm font-medium text-slate-700">Always On Time</span>
+                  <span className="text-sm font-medium text-slate-700">Safe & Reliable Travel Solutions 🚘</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200">
+                {/* <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200">
                   <HeartHandshake className="h-5 w-5 text-red-600" />
                   <span className="text-sm font-medium text-slate-700">Customer Focused</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -238,8 +239,9 @@ export default function AboutPage() {
               From economical hatchbacks to luxury sedans and spacious SUVs, we have the perfect vehicle for every journey
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {[
+              { name: "Swift Desire", model: "Premium Sedan", seats: "4 Passengers", image: "/cab/sedan-car.jpg" },
               { name: "Hatchback", model: "Swift, i10, WagonR", seats: "4 Passengers", image: "/cab/wagonr.jpg" },
               { name: "Sedan", model: "Dzire, Etios, Xcent", seats: "4 Passengers", image: "/cab/sedan-car.jpg" },
               { name: "SUV", model: "Innova, Ertiga, Xylo", seats: "6-7 Passengers", image: "/cab/Innova.png" },
@@ -255,7 +257,6 @@ export default function AboutPage() {
                   <span className="text-xs text-slate-600 flex items-center gap-1">
                     <Users className="h-3 w-3" /> {car.seats}
                   </span>
-                  <span className="text-sm font-bold text-red-600">{car.price}</span>
                 </div>
               </div>
             ))}
@@ -342,8 +343,8 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-slate-900/70" />
         </div>
-        <div className="relative w-full px-6 md:px-12 lg:px-20 xl:px-32">
-          <div className="text-center max-w-3xl mx-auto">
+        <div className="relative w-full px-6 md:px-12 lg:px-20 xl:px-32 mb-32">
+          <div className="text-center max-w-3xl mx-auto mb-8 mt-8">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
               Safe & Comfortable Travel Guaranteed
             </h2>
@@ -390,7 +391,7 @@ export default function AboutPage() {
                 <MapPin className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Office Address</h3>
-              <p className="text-slate-600">Shop no 39, 1st floor, RaniLaxmibai Madai , kalina Santacruz East Mumbai 400055</p>
+              <p className="text-slate-600">new Kalina market Rani Lakshmibai madai shop no 39 1st floor near geeta Vihar hotel kalina santacruz east Mumbai 400029</p>
               <p className="text-slate-500 text-sm">Maharashtra, India</p>
             </div>
             <div className="rounded-3xl bg-slate-50 p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -406,6 +407,7 @@ export default function AboutPage() {
                 <Mail className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Email Us</h3>
+              <p className="text-slate-600"><a href="mailto:info@shaguntravels.co.in" className="hover:text-red-600 hover:underline">info@shaguntravels.co.in</a></p>
               <p className="text-slate-600"><a href="mailto:shaguntravels1@gmail.com" className="hover:text-red-600 hover:underline">shaguntravels1@gmail.com</a></p>
               <p className="text-slate-500 text-sm">24/7 Support Available</p>
             </div>
