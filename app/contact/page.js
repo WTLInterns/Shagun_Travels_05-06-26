@@ -101,8 +101,8 @@ export default function ContactPage() {
             <ContactCard
               icon={MapPin}
               title="Visit Office"
-              lines={["Nanded City, Pune", "Maharashtra 411024"]}
-              action={{ href: "#", label: "Get Directions" }}
+              lines={["Kalina, Santacruz East", "Mumbai 400029"]}
+              action={{ href: "https://maps.app.goo.gl/PtMBRugWpd7s6pAd8?g_st=iw", label: "Get Directions" }}
             />
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function ContactPage() {
                 Visit Our Office
               </h2>
               <p className="text-slate-300 mb-8 leading-relaxed">
-                Prefer to meet in person? Our office is conveniently located in Nanded City, Pune. 
+                Prefer to meet in person? Our office is conveniently located in Kalina, Mumbai. 
                 Feel free to visit us for bookings, inquiries, or just to say hello!
               </p>
               <div className="space-y-4">
@@ -273,18 +273,25 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
-              {/* Google Maps Embed - Pune, Nanded City area */}
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.265588856342!2d73.8860!3d18.4533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaddc27984bd%3A0x1dca143b6f5e7!2sNanded%20City%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale-[20%]"
-              />
+            <div className="rounded-3xl overflow-hidden shadow-2xl relative group">
+              <a 
+                href="https://maps.app.goo.gl/PtMBRugWpd7s6pAd8?g_st=iw"
+                target="_blank"
+                rel="noreferrer"
+                className="block w-full h-full relative"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.1818274435863!2d72.868351!3d19.073434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8ef5c5f5f5f%3A0x5f5f5f5f5f5f5f5f!2sShagun%20Travels!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0, pointerEvents: 'none' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                ></iframe>
+                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors"></div>
+              </a>
             </div>
           </div>
         </div>
@@ -301,7 +308,7 @@ export default function ContactPage() {
           </p>
           <div className="flex justify-center gap-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/17KrrQoEsA/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg transition-all hover:bg-blue-700 hover:scale-110"
@@ -310,7 +317,7 @@ export default function ContactPage() {
               <Facebook className="h-7 w-7" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/travelsshagun?igsh=azBzNG1ndmF4ZzB1"
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 to-pink-500 text-white shadow-lg transition-all hover:scale-110"

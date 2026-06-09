@@ -68,12 +68,12 @@ export default function Navbar() {
         Icon: MessageCircle,
       },
       {
-        href: "https://facebook.com",
+        href: "https://www.facebook.com/share/17KrrQoEsA/",
         label: "Facebook",
         Icon: Facebook,
       },
       {
-        href: "https://instagram.com",
+        href: "https://www.instagram.com/travelsshagun?igsh=azBzNG1ndmF4ZzB1",
         label: "Instagram",
         Icon: Instagram,
       },

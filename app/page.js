@@ -213,7 +213,7 @@ export default function Home() {
             </div>
             <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-200">
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
-                <Image src="/cab/sedan-car.jpg" alt="Swift Desire" fill className="object-contain" />
+                <Image src="/cab/swift.jpg" alt="Swift Desire" fill className="object-contain" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Swift Desire</h3>
               <p className="text-sm text-slate-600">Premium Sedan - 4 Seater</p>

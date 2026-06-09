@@ -241,7 +241,7 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              { name: "Swift Desire", model: "Premium Sedan", seats: "4 Passengers", image: "/cab/sedan-car.jpg" },
+              { name: "Swift Desire", model: "Premium Sedan", seats: "4 Passengers", image: "/cab/swift.jpg" },
               { name: "Hatchback", model: "Swift, i10, WagonR", seats: "4 Passengers", image: "/cab/wagonr.jpg" },
               { name: "Sedan", model: "Dzire, Etios, Xcent", seats: "4 Passengers", image: "/cab/sedan-car.jpg" },
               { name: "SUV", model: "Innova, Ertiga, Xylo", seats: "6-7 Passengers", image: "/cab/Innova.png" },

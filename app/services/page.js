@@ -125,7 +125,7 @@ export default function ServicesPage() {
               icon={Car}
               title="Local City Rides"
               description="Perfect for daily commuting, shopping trips, hospital visits, and local sightseeing within Pune city. Professional drivers who know every corner of the city."
-              price="Starting from Rs.12/km"
+              // price="Starting from Rs.12/km"
               features={["4-7 seater options", "AC vehicles", "Experienced drivers", "24/7 availability"]}
             />
             <ServiceCard
