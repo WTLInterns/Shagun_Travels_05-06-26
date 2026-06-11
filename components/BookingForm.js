@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import emailjs from "@emailjs/browser";
 
 const tripTypes = ["One Way", "Round Trip", "Rental Trip", "Navi Mumbai Airport", "Local Rental  (4 hrs/40 km, 8 hrs/80 km, Full Day, etc.) ", "Mumbai local", "Pune local"];
 const carCategories = ["Hatchback", "Sedan", "Sedan Premium", "SUV", "MUV"];
@@ -45,9 +44,12 @@ export default function BookingForm() {
     setStatus({ state: "loading", message: "" });
 
     try {
-      const templateParams = {
+      const bookingData = {
+        type: "booking",
         tripType: form.tripType,
         carCategory: form.carCategory,
+        passengers: form.passengers,
+        luggage: form.luggage,
         pickupLocation: form.pickupLocation,
         dropLocation: form.dropLocation,
         date: form.date,
@@ -56,24 +58,26 @@ export default function BookingForm() {
         name: form.name,
         phone: form.phone,
         email: form.email || "N/A",
-        passengers: form.passengers,
-        luggage: form.luggage,
       };
 
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      );
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(bookingData),
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data?.error || "Failed to send booking request");
+      }
 
       setStatus({ state: "success", message: "Booking request sent successfully!" });
       setForm(initialForm);
     } catch (err) {
-      console.error("EmailJS Error:", err);
+      console.error("Booking Error:", err);
       setStatus({ 
         state: "error", 
-        message: "Failed to send booking request. Please try again or call us directly." 
+        message: err.message || "Failed to send booking request. Please try again or call us directly." 
       });
     }
   };

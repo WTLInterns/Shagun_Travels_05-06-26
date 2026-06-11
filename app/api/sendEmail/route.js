@@ -44,9 +44,12 @@ export async function POST(req) {
       const details = {
         tripType: body.tripType,
         carCategory: body.carCategory,
+        passengers: body.passengers,
+        luggage: body.luggage,
         pickupLocation: body.pickupLocation,
         dropLocation: body.dropLocation,
         date: body.date,
+        returnDate: body.returnDate,
         time: body.time,
         name: body.name,
         phone: body.phone,
