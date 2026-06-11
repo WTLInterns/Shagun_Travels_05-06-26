@@ -124,15 +124,15 @@ export default function Navbar() {
             className="flex items-center text-slate-900"
             aria-label="SHAGUN TRAVELS Home"
           >
-            <div className="relative h-16 w-50 overflow-hidden sm:h-16 sm:w-52">
-              <Image 
-                src="/cab/logo.jpeg" 
-                alt="SHAGUN TRAVELS Logo" 
-                fill 
-                priority
-                className="object-contain object-left" 
-              />
-            </div>
+           <div className="relative h-22 w-[260px] sm:h-22 sm:w-[300px]">
+  <Image
+    src="/cab/logo1.png"
+    alt="SHAGUN TRAVELS Logo"
+    fill
+    priority
+    className="object-contain"
+  />
+</div>
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex">
@@ -170,9 +170,10 @@ export default function Navbar() {
             <div className="flex items-center justify-between border-b border-slate-200 p-4">
               <div className="relative h-12 w-36 overflow-hidden">
                 <Image 
-                  src="/cab/logo.jpeg" 
+                  src="/cab/logo1.png" 
                   alt="Logo" 
                   fill 
+                  quality={100}
                   className="object-contain object-left" 
                 />
               </div>

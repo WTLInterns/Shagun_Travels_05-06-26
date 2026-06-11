@@ -20,14 +20,15 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="mb-6">
-              <div className="relative h-16 w-48 overflow-hidden">
-                <Image 
-                  src="/cab/logo.jpeg" 
-                  alt="SHAGUN TRAVELS Logo" 
-                  fill 
-                  className="object-contain object-left" 
-                />
-              </div>
+            <div className="relative h-24 w-[260px]">
+  <Image
+    src="/cab/logo1.png"
+    alt="SHAGUN TRAVELS Logo"
+    fill
+    quality={100}
+    className="object-contain"
+  />
+</div>
             </div>
             <div className="mt-5 space-y-3 text-sm text-slate-300">
               <div className="flex items-start gap-2">
